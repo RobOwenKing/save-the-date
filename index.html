@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Save The Date</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <link rel="stylesheet" href="./css/index.css" />
+    <script>
+      const reactToUserLanguage = () => {
+        const place = document.getElementById("place");
+
+        if (/^en\b/.test(navigator.language)) {
+          place.innerText = "Warsaw";
+        } else if (/^es\b/.test(navigator.language)) {
+          place.innerText = "Varsovia";
+        } else if (/^de\b/.test(navigator.language)) {
+          place.innerText = "Warschau";
+        }
+      };
+
+      document.addEventListener("DOMContentLoaded", () => {
+        reactToUserLanguage();
+      });
+    </script>
+  </head>
+
+  <body>
+    <h1 id="date">26/04/24</h1>
+    <img src="./assets/us.jpg" alt="Aleksandra and Rob" />
+    <h1 id="place">Warszawa</h1>
+  </body>
+</html>

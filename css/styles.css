@@ -1,0 +1,48 @@
+:root {
+  --color-primary: #023020;
+  --color-secondary: #a67c00;
+  --color-white: white;
+}
+
+body {
+  background: var(--color-primary);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-weight: 400;
+  /* font-family: $font-display; */
+  font-size: 4em;
+}
+
+#date {
+  color: var(--color-secondary);
+}
+
+#place {
+  color: var(--color-white);
+}
+
+img {
+  width: 100%;
+  max-height: 0vh;
+  object-fit: cover;
+  object-position: 25% 25%;
+
+  animation: 1s forwards img-reveal;
+  animation-delay: 3s;
+}
+
+@keyframes img-reveal {
+  from {
+    max-height: 0vh;
+  }
+
+  to {
+    max-height: 60vh;
+  }
+}
